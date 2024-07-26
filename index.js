@@ -10,7 +10,6 @@ app.post('/webhook', async (req, res) => {
     console.log(req.body);
     const data = {
         "title": req.body.tranid, // використовуючи tranid як title
-        "source_id": 1, // ідентифікатор джерела
         "manager_comment": "", // залишаємо порожнім, якщо немає коментаря
         "manager_id": 1, // ідентифікатор відповідального менеджера
         "pipeline_id": 1, // залишаємо порожнім або додайте значення за замовчуванням
