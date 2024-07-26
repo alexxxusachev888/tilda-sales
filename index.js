@@ -9,11 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 app.post('/webhook', async (req, res) => {
     console.log(req.body);
     const data = {
-        "title": req.body.title, // назва заявки
+        "title": req.body.tranid, // використовуючи tranid як title
         "source_id": 1, // ідентифікатор джерела
-        "manager_comment": req.body.manager_comment, // коментар до заявки
+        "manager_comment": "", // залишаємо порожнім, якщо немає коментаря
         "manager_id": 1, // ідентифікатор відповідального менеджера
-        "pipeline_id": req.body.pipeline_id, // ідентифікатор воронки (за відсутності параметра буде використана перша воронка у списку)
+        "pipeline_id": "", // залишаємо порожнім або додайте значення за замовчуванням
         "contact": [
             `full_name: ${req.body.name}`, // ПІБ покупця
             `email: ${req.body.email}`, // email покупця
