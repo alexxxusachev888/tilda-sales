@@ -16,8 +16,7 @@ app.post('/webhook', async (req, res) => {
         "contact": {
             "full_name": req.body.name, // ПІБ покупця
             "email": req.body.email, // email покупця
-            "phone": req.body.phone, // номер телефону покупця
-            "client_id": 1
+            "phone": req.body.phone // номер телефону покупця
         },
         "utm_source": req.body.utm_source, // джерело компанії
         "utm_medium": req.body.utm_medium, // тип трафіку
