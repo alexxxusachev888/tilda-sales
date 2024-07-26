@@ -13,12 +13,12 @@ app.post('/webhook', async (req, res) => {
         "source_id": 1, // ідентифікатор джерела
         "manager_comment": "", // залишаємо порожнім, якщо немає коментаря
         "manager_id": 1, // ідентифікатор відповідального менеджера
-        "pipeline_id": "1", // залишаємо порожнім або додайте значення за замовчуванням
+        "pipeline_id": 1, // залишаємо порожнім або додайте значення за замовчуванням
         "contact": {
             "full_name": req.body.name, // ПІБ покупця
             "email": req.body.email, // email покупця
             "phone": req.body.phone, // номер телефону покупця
-            "client_id": "1"
+            "client_id": 1
         },
         "utm_source": req.body.utm_source, // джерело компанії
         "utm_medium": req.body.utm_medium, // тип трафіку
