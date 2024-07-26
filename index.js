@@ -6,6 +6,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.post('/webhook', async (req, res) => {
+    console.log(req.body);
     const data = {
         "title": req.body.title, // назва заявки
         "source_id": 1, // ідентифікатор джерела
