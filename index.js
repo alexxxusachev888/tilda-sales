@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.post('/submit', async (req, res) => {
+app.post('/webhook', async (req, res) => {
     const data = req.body;
     const apiToken = (process.env.KEYCRM_API_KEY);
     const url = 'https://openapi.keycrm.app/v1/pipelines/cards';
