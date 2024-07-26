@@ -13,9 +13,9 @@ app.post('/webhook', async (req, res) => {
         "manager_id": 1, // ідентифікатор відповідального менеджера
         "pipeline_id": req.body.pipeline_id, // ідентифікатор воронки (за відсутності параметра буде використана перша воронка у списку)
         "contact": [
-            { "full_name": req.body.name }, // ПІБ покупця
-            { "email": req.body.email }, // email покупця
-            { "phone": req.body.phone } // номер телефону покупця
+            `full_name: ${req.body.name}`, // ПІБ покупця
+            `email: ${req.body.email}`, // email покупця
+            `phone: ${req.body.phone}` // номер телефону покупця
         ],
         "utm_source": req.body.utm_source, // джерело компанії
         "utm_medium": req.body.utm_medium, // тип трафіку
