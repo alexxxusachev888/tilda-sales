@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/webhook', async (req, res) => {
-    res.status(200).json({ message: "Received" });
+    
     const data = {
         "title": req.body.tranid, // використовуючи tranid як title
         "manager_comment": "", // залишаємо порожнім, якщо немає коментаря
